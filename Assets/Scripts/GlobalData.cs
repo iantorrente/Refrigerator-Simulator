@@ -4,7 +4,7 @@ using UnityEngine;
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
   public int score { get; set; }
-  public List<GameObject> foodPool = new List<GameObject>();
+  public List<Rigidbody2D> foodPool = new List<Rigidbody2D>();
 
   void Awake () {
     if (globalData == null) {
