@@ -12,7 +12,8 @@ public class FoodSpawner : MonoBehaviour {
       if (GetComponent<Collider2D>().OverlapPoint(touchPos)) {
         Rigidbody2D foodInstance;
         foodInstance = Instantiate(foodPrefab, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
-        Object.Destroy(GetComponent<Collider2D>().gameObject);
+        Destroy(GetComponent<Collider2D>());
+        GetComponent<SpriteRenderer>().enabled = false;
         Debug.Log("Touching foods pawner");
       }
     }

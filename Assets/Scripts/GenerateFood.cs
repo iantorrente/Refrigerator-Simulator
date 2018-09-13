@@ -22,6 +22,7 @@ public class GenerateFood : MonoBehaviour {
       for (int i = 0; i < foodSpawners.Length; i++) {
         Rigidbody2D randomFood = foodPool[Random.Range(0, foodPool.Count)];
         Collider2D rFCollider = randomFood.GetComponent<Collider2D>();
+        foodSpawners[i].GetComponent<SpriteRenderer>().enabled = true;
         foodSpawners[i].GetComponent<SpriteRenderer>().sprite = randomFood.GetComponent<SpriteRenderer>().sprite;
         foodSpawners[i].transform.localScale = randomFood.transform.localScale;
         foodSpawners[i].AddComponent(rFCollider.GetType());
