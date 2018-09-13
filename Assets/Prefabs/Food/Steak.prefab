@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1143566675912008}
+  m_RootGameObject: {fileID: 1400852293351884}
   m_IsPrefabAsset: 1
---- !u!1 &1143566675912008
+--- !u!1 &1400852293351884
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4372928935260526}
-  - component: {fileID: 114553596892799342}
-  - component: {fileID: 50034111863423916}
-  - component: {fileID: 212377312884415760}
-  - component: {fileID: 61601864871062390}
-  m_Layer: 0
-  m_Name: Burger
+  - component: {fileID: 4369417562307106}
+  - component: {fileID: 114567750368025498}
+  - component: {fileID: 212167434320594276}
+  - component: {fileID: 50797612636102160}
+  - component: {fileID: 60246835124611256}
+  m_Layer: 8
+  m_Name: Steak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4372928935260526
+--- !u!4 &4369417562307106
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143566675912008}
+  m_GameObject: {fileID: 1400852293351884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -1.53, z: 1.4142753}
-  m_LocalScale: {x: 0.272, y: 0.269, z: 1}
+  m_LocalPosition: {x: 0.924, y: -0.534, z: 1.5109863}
+  m_LocalScale: {x: 1.0458, y: 1.0496, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50034111863423916
+--- !u!50 &50797612636102160
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143566675912008}
+  m_GameObject: {fileID: 1400852293351884}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,51 +63,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &61601864871062390
-BoxCollider2D:
+--- !u!60 &60246835124611256
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143566675912008}
+  m_GameObject: {fileID: 1400852293351884}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10093057, y: -0.03401953}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.3, y: 6.3}
-    newSize: {x: 6.3, y: 6.3}
+    oldSize: {x: 2.24, y: 2.24}
+    newSize: {x: 2.24, y: 2.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.90008, y: 3.5558038}
-  m_EdgeRadius: 0
---- !u!114 &114553596892799342
+  m_Points:
+    m_Paths:
+    - - {x: -0.8542594, y: -0.24392377}
+      - {x: -0.64316744, y: -0.46457884}
+      - {x: 0.61700225, y: -0.4190342}
+      - {x: 0.7723554, y: -0.102098964}
+      - {x: 0.7070446, y: 0.11645717}
+      - {x: 0.34062102, y: 0.41410092}
+      - {x: -0.42265445, y: 0.3758989}
+      - {x: -0.7818189, y: 0.15486287}
+--- !u!114 &114567750368025498
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143566675912008}
+  m_GameObject: {fileID: 1400852293351884}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8487c515190e8fe48822035e2328000d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 100
-  moneyValue: 25
+  foodName: Steak
+  scoreValue: 125
+  moneyValue: 50
   type: small
---- !u!212 &212377312884415760
+--- !u!212 &212167434320594276
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143566675912008}
+  m_GameObject: {fileID: 1400852293351884}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -136,13 +144,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ef4cb39ccbdf965448e2503f08306249, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 50f77231e7650144b84ea4f46598d3bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.3, y: 6.3}
+  m_Size: {x: 2.24, y: 2.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
