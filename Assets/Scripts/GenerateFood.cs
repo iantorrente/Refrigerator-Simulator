@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class GenerateFood : MonoBehaviour {
 
-  public Rigidbody2D foodPrefab;
-  public Transform foodSpawner;
   private List<Rigidbody2D> foodPool { get; set; }
 
   public void buttonClick () {
@@ -18,7 +16,7 @@ public class GenerateFood : MonoBehaviour {
     GameObject[] foodSpawners = GameObject.FindGameObjectsWithTag("Food Spawner");
     Debug.Log(foodSpawners.Length);
 
-    if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN") {
+    if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN" ) {
       for (int i = 0; i < foodSpawners.Length; i++) {
         Rigidbody2D randomFood = foodPool[Random.Range(0, foodPool.Count)];
         Collider2D rFCollider = randomFood.GetComponent<Collider2D>();
@@ -44,8 +42,10 @@ public class GenerateFood : MonoBehaviour {
 
   private void handleOpenClose (GameObject fridgeButton) {
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN") {
+      GlobalData.globalData.interactable = true;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "CLOSE";
     } else if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "CLOSE") {
+      GlobalData.globalData.interactable = false;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "OPEN";
     }
   }

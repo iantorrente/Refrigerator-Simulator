@@ -5,7 +5,7 @@ public class FoodSpawner : MonoBehaviour {
 
   void Update () {
     //Need to do a check that the player isn't holding an item with that finger
-    if (Input.touchCount > 0) {
+    if (Input.touchCount > 0 && GlobalData.globalData.interactable == true) {
       Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
       Vector2 touchPos = new Vector2(worldPoint.x, worldPoint.y);
 

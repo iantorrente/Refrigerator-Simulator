@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
+  public bool interactable = false;
   public int score { get; set; }
   public List<Rigidbody2D> foodPool = new List<Rigidbody2D>();
 
