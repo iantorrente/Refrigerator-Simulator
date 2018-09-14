@@ -710,9 +710,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 5ce76e40-3ec8-469a-8335-8a6aa7f61fea
+  projectName: Refrigerator Simulator
+  organizationId: jinchronic
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

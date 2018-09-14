@@ -15,7 +15,7 @@ public class DragRigidBody2D : MonoBehaviour
     public LayerMask draggableLayers;
 
     //How much damping should be applied to dragging. A higher number allows for more sluggish dragging, a lower number allows for snappier dragging
-    public float dragDamping = 10.0f;
+    public float dragDamping = 5.0f;
 
     //Should the dragged body be allowed to rotate?
     public bool freezeRotation = false;
@@ -24,7 +24,7 @@ public class DragRigidBody2D : MonoBehaviour
     public bool snapToCenter = true;
 
     //If we are snapping to center, how fast should we snap?
-    public float snapSpeed = 3.0f;
+    public float snapSpeed = 1.0f;
 
     //Offset the drag by the velocity of this rigidbody when dragging
     public Rigidbody2D relativeToRigidbody;
@@ -79,8 +79,8 @@ public class DragRigidBody2D : MonoBehaviour
                 info.draggedRigidbody = hit.transform.GetComponent<Rigidbody2D>();
                 info.oldConstraints = info.draggedRigidbody.constraints;
 
-                if (freezeRotation)
-                    info.draggedRigidbody.constraints = info.draggedRigidbody.constraints | RigidbodyConstraints2D.FreezeRotation;
+                // if (freezeRotation)
+                //     info.draggedRigidbody.constraints = info.draggedRigidbody.constraints | RigidbodyConstraints2D.FreezeRotation;
 
                 //Get the current offset
                 info.localPickOffset = hit.transform.InverseTransformPoint(GetComponent<Camera>().ScreenToWorldPoint(touch.position));
