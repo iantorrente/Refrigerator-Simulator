@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114572225298377970}
   - component: {fileID: 212458553577345212}
   - component: {fileID: 50218849963595386}
-  - component: {fileID: 60181820802829190}
+  - component: {fileID: 60174015930495690}
   m_Layer: 8
   m_Name: Hot Pepper
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1499915614191194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.075, y: -1.361, z: 1.5071038}
-  m_LocalScale: {x: 0.5658, y: 0.5623, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &60181820802829190
+--- !u!60 &60174015930495690
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,17 +87,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.6173911, y: -0.669205}
-      - {x: -0.22098279, y: -0.836349}
-      - {x: 0.55225927, y: -0.82281816}
-      - {x: 0.9729033, y: -0.58142287}
-      - {x: 0.97999996, y: -0.32}
-      - {x: 0.96, y: -0.29999998}
-      - {x: 0.20832466, y: -0.35859987}
-      - {x: -0.8375387, y: 0.67389876}
-      - {x: -0.9644181, y: 1.4692477}
-      - {x: -1.341406, y: 1.3780875}
-      - {x: -1.4616039, y: 0.074187055}
+    - - {x: 0.0936414, y: 0.15196078}
+      - {x: 0.070504, y: 0.09896348}
+      - {x: 0.029015446, y: 0.09404669}
+      - {x: -0.13392155, y: -0.09899161}
+      - {x: -0.10403347, y: -0.118515395}
+      - {x: -0.03712493, y: -0.10749739}
+      - {x: 0.057990383, y: -0.044691015}
+      - {x: 0.09831937, y: 0.002016759}
+      - {x: 0.13047619, y: 0.07994405}
+      - {x: 0.13081233, y: 0.15081231}
 --- !u!114 &114572225298377970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b37a4455af7bb9f4db2c7dec0cd7821c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fafabba593087be468b271149ffaee43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
