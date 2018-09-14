@@ -11,7 +11,7 @@ public class FoodSpawner : MonoBehaviour {
       if (this.GetComponent<Collider2D>() != null && GetComponent<Collider2D>().OverlapPoint(worldPoint)) {
         Rigidbody2D foodInstance;
         foodInstance = Instantiate(foodPrefab, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
-        foodInstance.gravityScale = 0;
+        foodInstance.transform.localScale = foodInstance.transform.localScale;
         Destroy(GetComponent<Collider2D>());
         GetComponent<SpriteRenderer>().enabled = false;
       }

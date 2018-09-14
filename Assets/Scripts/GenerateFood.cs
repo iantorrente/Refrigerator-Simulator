@@ -22,7 +22,7 @@ public class GenerateFood : MonoBehaviour {
         Collider2D rFCollider = randomFood.GetComponent<Collider2D>();
         foodSpawners[i].GetComponent<SpriteRenderer>().enabled = true;
         foodSpawners[i].GetComponent<SpriteRenderer>().sprite = randomFood.GetComponent<SpriteRenderer>().sprite;
-        foodSpawners[i].transform.localScale = randomFood.transform.localScale;
+        foodSpawners[i].transform.localScale = randomFood.transform.localScale / 10;
         foodSpawners[i].AddComponent(rFCollider.GetType());
         foodSpawners[i].GetComponent<Collider2D>().isTrigger = true;
         foodSpawners[i].GetComponent<FoodSpawner>().foodPrefab = randomFood;
@@ -44,9 +44,11 @@ public class GenerateFood : MonoBehaviour {
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN") {
       GlobalData.globalData.interactable = true;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "CLOSE";
+      GameObject.Find("Refrigerator1_Door").GetComponent<SpriteRenderer>().enabled = false;
     } else if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "CLOSE") {
       GlobalData.globalData.interactable = false;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "OPEN";
+      GameObject.Find("Refrigerator1_Door").GetComponent<SpriteRenderer>().enabled = true;
     }
   }
 }
