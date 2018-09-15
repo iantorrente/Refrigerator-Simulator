@@ -17,7 +17,7 @@ public class FoodScoreHandler : MonoBehaviour {
     Helpers.updateScore(value);
 
     if(foodCorrectSequence.GetRange(0, foodPlayerSequence.Count).SequenceEqual(foodPlayerSequence) )CheckFoodSequence();
-    else foodPlayerSequence = new List<string>();
+    else foodPlayerSequence = new List<string>(){name};
     Object.Destroy(collider.gameObject);
   }
 
