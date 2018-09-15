@@ -22,7 +22,9 @@ public class FoodScoreHandler : MonoBehaviour {
   }
 
   void CheckFoodSequence(){
-	  if(foodPlayerSequence.SequenceEqual( foodCorrectSequence)) Helpers.updateScore(1000);
-	  
+	  if(foodPlayerSequence.SequenceEqual( foodCorrectSequence)){ 
+      Helpers.updateScore(1000);  
+      foodPlayerSequence = new List<string>();
+    }
   }
 }
