@@ -26,13 +26,13 @@ public class Helpers : MonoBehaviour {
     updateScoreboard();
   }
 
-  public static void updateTimer (int time) {
+  public static void updateTimerText (int time) {
     GameObject timer = GameObject.Find("Timer Text");
     timer.GetComponent<Text>().enabled = true;
     timer.GetComponent<Text>().text = ((time + 1).ToString());
   }
 
-  public static void disableTimer () {
+  public static void disableTimerText () {
     GameObject timer = GameObject.Find("Timer Text");
     timer.GetComponent<Text>().enabled = false;
   }
@@ -46,7 +46,7 @@ public class Helpers : MonoBehaviour {
   }
 
   public static void endScoreRun () {
-    disableTimer();
+    disableTimerText();
     rewardMoney();
     setHighScore();
     restartScore();

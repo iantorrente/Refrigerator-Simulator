@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour {
 
   void Update () {
     GlobalData.globalData.scoreRunTime -= Time.deltaTime;
-    Helpers.updateTimer((int)GlobalData.globalData.scoreRunTime);
+    Helpers.updateTimerText((int)GlobalData.globalData.scoreRunTime);
 
     if (GlobalData.globalData.scoreRunTime < 0) {
       Helpers.endScoreRun();
