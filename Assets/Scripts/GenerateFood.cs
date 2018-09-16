@@ -14,7 +14,6 @@ public class GenerateFood : MonoBehaviour {
     GameObject fridgeButton = GameObject.Find("Refrigerator");
     foodPool = GlobalData.globalData.foodPool;
     GameObject[] foodSpawners = GameObject.FindGameObjectsWithTag("Food Spawner");
-    Debug.Log(foodSpawners.Length);
 
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN" ) {
       for (int i = 0; i < foodSpawners.Length; i++) {

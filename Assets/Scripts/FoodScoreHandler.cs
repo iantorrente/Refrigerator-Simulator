@@ -14,7 +14,8 @@ public class FoodScoreHandler : MonoBehaviour {
 	  foodPlayerSequence.Add(name);
     
     int value = collider.gameObject.GetComponent<FoodValue>().scoreValue;
-    Helpers.updateScore(value);
+    Helpers.increaseScore(value);
+    Helpers.startScoreRun();
 
     if(foodCorrectSequence.GetRange(0, foodPlayerSequence.Count).SequenceEqual(foodPlayerSequence) )CheckFoodSequence();
     else foodPlayerSequence = new List<string>(){name};
