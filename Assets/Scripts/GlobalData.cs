@@ -4,7 +4,10 @@ using UnityEngine;
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
   public bool interactable = false;
+  public double money { get; set; }
   public int score { get; set; }
+  public int highScore { get; set; }
+  public float scoreRunTime = 3.0f;
   public List<Rigidbody2D> foodPool = new List<Rigidbody2D>();
 
   void Awake () {

@@ -8,7 +8,8 @@ public class FoodScoreHandler : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D collider) {
     int value = collider.gameObject.GetComponent<FoodValue>().scoreValue;
-    Helpers.updateScore(value);
+    Helpers.increaseScore(value);
+    Helpers.startScoreRun();
     Object.Destroy(collider.gameObject);
   }
 }
