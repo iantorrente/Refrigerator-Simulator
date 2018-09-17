@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food Spawner
   - Spawner
+  - Food List
   layers:
   - Default
   - TransparentFX

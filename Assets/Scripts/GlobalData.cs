@@ -7,7 +7,8 @@ public class GlobalData : MonoBehaviour {
   public double money { get; set; }
   public int score { get; set; }
   public int highScore { get; set; }
-  public float scoreRunTime = 3.0f;
+  public float maxScoreRunTime = 10.0f; //As the timer goes on decrease this
+  public float scoreRunTime = 3.0f; //When this gets reset set it to maxScoreRunTime
   public List<Rigidbody2D> foodPool = new List<Rigidbody2D>();
 
   void Awake () {
