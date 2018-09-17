@@ -4,7 +4,7 @@ using UnityEngine;
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
   public bool interactable = false;
-  public double money { get; set; }
+  public double money;
   public int score { get; set; }
   public int highScore { get; set; }
   public float maxScoreRunTime = 10.0f; //As the timer goes on decrease this

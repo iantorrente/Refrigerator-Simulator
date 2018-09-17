@@ -109,6 +109,7 @@ MonoBehaviour:
   foodName: Steak
   scoreValue: 125
   moneyValue: 50
+  cost: 249.99
   type: small
 --- !u!212 &212167434320594276
 SpriteRenderer:

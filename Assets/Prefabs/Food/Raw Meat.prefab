@@ -110,6 +110,7 @@ MonoBehaviour:
   foodName: Raw Meat
   scoreValue: -25
   moneyValue: 0
+  cost: 49.99
   type: small
 --- !u!212 &212582705837870938
 SpriteRenderer:

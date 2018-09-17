@@ -2298,6 +2298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 0
+  money: 500
   maxScoreRunTime: 10
   scoreRunTime: 3
   foodPool:

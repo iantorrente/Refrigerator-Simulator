@@ -111,6 +111,7 @@ MonoBehaviour:
   foodName: Chicken
   scoreValue: 50
   moneyValue: 20
+  cost: 39.99
   type: small
 --- !u!212 &212564542661918036
 SpriteRenderer:

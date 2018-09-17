@@ -112,6 +112,7 @@ MonoBehaviour:
   foodName: Banana
   scoreValue: 15
   moneyValue: 5
+  cost: 24.99
   type: small
 --- !u!212 &212509708069879292
 SpriteRenderer:

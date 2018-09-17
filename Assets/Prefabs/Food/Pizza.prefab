@@ -106,6 +106,7 @@ MonoBehaviour:
   foodName: Pizza
   scoreValue: 125
   moneyValue: 25
+  cost: 49.99
   type: small
 --- !u!212 &212370867641711372
 SpriteRenderer:

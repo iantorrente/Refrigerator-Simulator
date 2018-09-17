@@ -106,6 +106,7 @@ MonoBehaviour:
   foodName: Fish
   scoreValue: 50
   moneyValue: 10
+  cost: 89.99
   type: small
 --- !u!212 &212672288636135584
 SpriteRenderer:
