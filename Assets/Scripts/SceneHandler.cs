@@ -8,8 +8,13 @@ public class SceneHandler : MonoBehaviour {
 
     if (pressedButton == "Shop") {
       SceneManager.LoadScene("FoodPurchase", LoadSceneMode.Single);
+    } else if (pressedButton == "BackButton") {
+      SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
-    Helpers.endScoreRun();
+    //Whatever condition it takes to end the score run, just end it before moving scenes
+    if (GlobalData.globalData.score != 0) {
+      Helpers.endScoreRun();
+    }
   }
 }

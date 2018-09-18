@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -118,11 +119,13 @@ public class GroceryStoreHandler : MonoBehaviour {
       GlobalData.globalData.money -= cost;
       updateMoneyDisplay();
       GlobalData.globalData.foodPool.Add(selectedFood.GetComponent<Rigidbody2D>());
+      deactivatePurchasedFood();
     }
   }
 
   private void getActiveButtons () {
     activeButtons = GameObject.FindObjectsOfType<Button>();
+    deactivatePurchasedFood();
   }
 
   private void deactivateButtons () {
@@ -134,6 +137,23 @@ public class GroceryStoreHandler : MonoBehaviour {
   private void activateButtons () {
     for (int i = 0; i < activeButtons.Length; i++) {
       activeButtons[i].interactable = true;
+    }
+    deactivatePurchasedFood();
+  }
+
+  private void deactivatePurchasedFood () {
+    List<Rigidbody2D> purchasedFood = GlobalData.globalData.foodPool;
+
+    for (int i = 0; i < purchasedFood.Count; i++) {
+      for (int j = 0; j < activeButtons.Length; j++) {
+        if (purchasedFood[i].GetComponent<FoodValue>().foodName == activeButtons[j].name) {
+          activeButtons[j].interactable = false;
+          var buttonColor = activeButtons[j].image.color;
+          buttonColor.a = 1f;
+          activeButtons[j].image.color = buttonColor;
+        }
+      }
+      
     }
   }
 }
