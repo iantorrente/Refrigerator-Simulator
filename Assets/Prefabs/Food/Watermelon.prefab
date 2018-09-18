@@ -109,6 +109,7 @@ MonoBehaviour:
   foodName: Watermelon
   scoreValue: 15
   moneyValue: 5
+  cost: 9.99
   type: small
 --- !u!212 &212096764772543076
 SpriteRenderer:

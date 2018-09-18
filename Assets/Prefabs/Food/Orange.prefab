@@ -107,6 +107,7 @@ MonoBehaviour:
   foodName: Orange
   scoreValue: 15
   moneyValue: 5
+  cost: 9.99
   type: small
 --- !u!212 &212270188139718254
 SpriteRenderer:

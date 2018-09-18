@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-public class Timer : MonoBehaviour {
-  public Timer timer { get; set; }
+public class ScoreRunTimer : MonoBehaviour {
+  public ScoreRunTimer timer { get; set; }
 
   void Update () {
     GlobalData.globalData.scoreRunTime -= Time.deltaTime;

@@ -106,6 +106,7 @@ MonoBehaviour:
   foodName: Cake
   scoreValue: 150
   moneyValue: 75
+  cost: 149.99
   type: small
 --- !u!212 &212830138901160760
 SpriteRenderer:

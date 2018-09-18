@@ -142,6 +142,7 @@ MonoBehaviour:
   foodName: Sushi
   scoreValue: 50
   moneyValue: 15
+  cost: 29.99
   type: small
 --- !u!212 &212510834478214356
 SpriteRenderer:

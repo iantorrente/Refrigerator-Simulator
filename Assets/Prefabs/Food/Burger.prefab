@@ -102,6 +102,7 @@ MonoBehaviour:
   foodName: Burger
   scoreValue: 100
   moneyValue: 25
+  cost: 59.99
   type: small
 --- !u!212 &212377312884415760
 SpriteRenderer:

@@ -111,6 +111,7 @@ MonoBehaviour:
   foodName: Hot Pepper
   scoreValue: 25
   moneyValue: 100
+  cost: 24.99
   type: small
 --- !u!212 &212458553577345212
 SpriteRenderer:

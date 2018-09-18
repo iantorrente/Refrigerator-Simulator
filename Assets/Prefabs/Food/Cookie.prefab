@@ -92,6 +92,7 @@ MonoBehaviour:
   foodName: Cookie
   scoreValue: 75
   moneyValue: 15
+  cost: 29.99
   type: small
 --- !u!212 &212675474101392442
 SpriteRenderer:

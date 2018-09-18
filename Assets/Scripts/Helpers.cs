@@ -38,10 +38,10 @@ public class Helpers : MonoBehaviour {
   }
 
   public static void startScoreRun() {
-    GlobalData.globalData.scoreRunTime = 3.0f;
+    GlobalData.globalData.scoreRunTime = GlobalData.globalData.maxScoreRunTime;
     //Adding the component to the game object 'Timer' starts the timer
-    if (!GameObject.Find("Timer").GetComponent<Timer>()) {
-      GameObject.Find("Timer").AddComponent<Timer>();
+    if (!GameObject.Find("Timer").GetComponent<ScoreRunTimer>()) {
+      GameObject.Find("Timer").AddComponent<ScoreRunTimer>();
     }
   }
 
