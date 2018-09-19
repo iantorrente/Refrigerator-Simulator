@@ -153,7 +153,6 @@ public class GroceryStoreHandler : MonoBehaviour {
           activeButtons[j].image.color = buttonColor;
         }
       }
-      
     }
   }
 }
