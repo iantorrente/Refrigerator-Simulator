@@ -26,9 +26,11 @@ public class FoodScoreHandler : MonoBehaviour {
       {foodCorrectSequences[5],() => Helpers.increaseScore(200)},
       {foodCorrectSequences[6],() => Helpers.increaseScore(-200)}
     }; 
-
- 
+    ChewingHandler chewingHandler;
 	List<string> foodPlayerSequence = new List<string>{};
+  void Start(){
+    this.chewingHandler = new ChewingHandler();
+  }
 
 	void OnTriggerEnter2D (Collider2D collider) {
     string name = collider.gameObject.GetComponent<FoodValue>().foodName;
@@ -52,6 +54,7 @@ public class FoodScoreHandler : MonoBehaviour {
     if(!check){
       foodPlayerSequence = new List<string>(){name};
     }
+    chewingHandler.Chew();
     Object.Destroy(collider.gameObject);
   }
 

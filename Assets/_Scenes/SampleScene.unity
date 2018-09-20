@@ -611,7 +611,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311676944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -7.43, z: 1.0917969}
+  m_LocalPosition: {x: -0.03, y: -5.79, z: 1.0917969}
   m_LocalScale: {x: 5.5353613, y: 3.05487, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 424682091}
   m_Layer: 0
   m_Name: Face Bottom
-  m_TagString: Untagged
+  m_TagString: Face
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424682090}
   m_LocalRotation: {x: -0, y: -0, z: 0.0036367737, w: 0.9999934}
-  m_LocalPosition: {x: -7.816011, y: -0.1178679, z: 0}
+  m_LocalPosition: {x: -7.44, y: -0.08, z: 0}
   m_LocalScale: {x: 0.9353118, y: 1.0271622, z: 1}
   m_Children: []
   m_Father: {fileID: 1961006437}
@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 1961006436}
   m_Layer: 0
   m_Name: Face Top
-  m_TagString: Untagged
+  m_TagString: Face
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
