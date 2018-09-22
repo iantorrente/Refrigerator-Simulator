@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1785243615453282}
+  m_RootGameObject: {fileID: 1079361008018394}
   m_IsPrefabAsset: 1
---- !u!1 &1785243615453282
+--- !u!1 &1079361008018394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4718742446919430}
-  - component: {fileID: 114566151202796216}
-  - component: {fileID: 212564542661918036}
-  - component: {fileID: 50019809547218856}
-  - component: {fileID: 60046458937863702}
+  - component: {fileID: 4457823182811036}
+  - component: {fileID: 114149199205093560}
+  - component: {fileID: 212332435370182534}
+  - component: {fileID: 50944227723973612}
+  - component: {fileID: 60552055614681228}
   m_Layer: 8
-  m_Name: Chicken
+  m_Name: Cooked Chicken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4718742446919430
+--- !u!4 &4457823182811036
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785243615453282}
+  m_GameObject: {fileID: 1079361008018394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.079, y: -1.052, z: 1.5065358}
-  m_LocalScale: {x: 0.22880831, y: 0.2246083, z: 1}
+  m_LocalPosition: {x: 1.19, y: -0.89, z: 1.5065358}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50019809547218856
+--- !u!50 &50944227723973612
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785243615453282}
+  m_GameObject: {fileID: 1079361008018394}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,12 +63,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &60046458937863702
+--- !u!60 &60552055614681228
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785243615453282}
+  m_GameObject: {fileID: 1079361008018394}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -79,46 +79,50 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4488102, y: 1.8010578}
-      - {x: -0.54235303, y: 1.1733221}
-      - {x: -2.5698395, y: 0.8212245}
-      - {x: -3.385038, y: -0.5221084}
-      - {x: -3.3540862, y: -1.5919383}
-      - {x: -2.1044812, y: -2.4213119}
-      - {x: 0.6899095, y: -2.4367054}
-      - {x: 2.2857635, y: 0.99929094}
-      - {x: 4.160569, y: 2.3850589}
-      - {x: 3.035904, y: 3.6848135}
---- !u!114 &114566151202796216
+    - - {x: -0.34411773, y: 0.4848217}
+      - {x: -0.48927495, y: 0.34627435}
+      - {x: -0.48519593, y: 0.010169411}
+      - {x: -0.4392247, y: -0.057999898}
+      - {x: -0.26059934, y: -0.17227487}
+      - {x: 0.012467575, y: -0.17573872}
+      - {x: 0.15830994, y: -0.23986197}
+      - {x: 0.25555107, y: -0.45352468}
+      - {x: 0.47854987, y: -0.4535248}
+      - {x: 0.4892749, y: -0.18670054}
+      - {x: 0.29317522, y: -0.13078108}
+      - {x: 0.2105156, y: 0.04495993}
+      - {x: 0.13846217, y: 0.29393145}
+      - {x: -0.030819988, y: 0.47915003}
+--- !u!114 &114149199205093560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785243615453282}
+  m_GameObject: {fileID: 1079361008018394}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8487c515190e8fe48822035e2328000d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodName: Chicken
+  foodName: Cooked Chicken
   scoreValue: 50
   moneyValue: 20
   cost: 39.99
   type: small
---- !u!212 &212564542661918036
+--- !u!212 &212332435370182534
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785243615453282}
+  m_GameObject: {fileID: 1079361008018394}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -148,12 +152,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca6eb2428c022a443a48c4a159dece6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d88735c47c06d4d4f93b746b16ea664a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
