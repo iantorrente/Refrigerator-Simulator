@@ -32,8 +32,9 @@ public class Helpers : MonoBehaviour {
     multiplierboard.GetComponent<Text>().text = ("x" + GlobalData.globalData.scoreMultiplier);
   }
 
-  public static void increaseFoodInScoreRun () {
+  public static void increaseFoodEaten () {
     GlobalData.globalData.foodInScoreRun += 1;
+    GlobalData.globalData.totalFoodEaten += 1;
     checkMultiplier();
   }
 
@@ -42,15 +43,15 @@ public class Helpers : MonoBehaviour {
     Debug.Log(foodInScoreRun);
 
     if (foodInScoreRun > 1 && foodInScoreRun <= 10) {
-      GlobalData.globalData.scoreMultiplier = 1.10f;
-    } else if (foodInScoreRun > 10 && foodInScoreRun <= 25) {
-      GlobalData.globalData.scoreMultiplier = 1.15f;
-    } else if (foodInScoreRun > 25 && foodInScoreRun <= 50) {
       GlobalData.globalData.scoreMultiplier = 1.25f;
+    } else if (foodInScoreRun > 10 && foodInScoreRun <= 25) {
+      GlobalData.globalData.scoreMultiplier = 1.50f;
+    } else if (foodInScoreRun > 25 && foodInScoreRun <= 50) {
+      GlobalData.globalData.scoreMultiplier = 2.0f;
     } else if (foodInScoreRun > 50 && foodInScoreRun <= 100) {
-      GlobalData.globalData.scoreMultiplier = 1.40f;
+      GlobalData.globalData.scoreMultiplier = 2.75f;
     } else if (foodInScoreRun > 100) {
-      GlobalData.globalData.scoreMultiplier = 1.75f;
+      GlobalData.globalData.scoreMultiplier = 3.75f;
     }
 
     decreaseTimer();
@@ -60,17 +61,15 @@ public class Helpers : MonoBehaviour {
   private static void decreaseTimer () {
     float multiplier = GlobalData.globalData.scoreMultiplier;
 
-    if (multiplier == 1.0f) {
+    if (multiplier == 1.25f) {
       GlobalData.globalData.maxScoreRunTime = 10.0f;
-    } else if (multiplier == 1.1f) {
+    } else if (multiplier == 1.50f) {
       GlobalData.globalData.maxScoreRunTime = 9.0f;
-    } else if (multiplier == 1.15f) {
+    } else if (multiplier == 2.0f) {
       GlobalData.globalData.maxScoreRunTime = 7.5f;
-    } else if (multiplier == 1.25f) {
-      GlobalData.globalData.maxScoreRunTime = 6.0f;
-    } else if (multiplier == 1.40f) {
+    } else if (multiplier == 2.75f) {
       GlobalData.globalData.maxScoreRunTime = 4.5f;
-    } else if (multiplier == 1.75f) {
+    } else if (multiplier == 3.75f) {
       GlobalData.globalData.maxScoreRunTime = 2.0f;
     }
   }
