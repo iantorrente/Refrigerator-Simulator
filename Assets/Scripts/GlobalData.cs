@@ -7,6 +7,7 @@ public class GlobalData : MonoBehaviour {
   public double money;
   public int score { get; set; }
   public int highScore { get; set; }
+  public int totalFoodEaten { get; set; }
   public int foodInScoreRun { get; set; }
   public float scoreMultiplier = 1f;
   public float maxScoreRunTime = 10.0f; //As the multiplier goes up decrease this
