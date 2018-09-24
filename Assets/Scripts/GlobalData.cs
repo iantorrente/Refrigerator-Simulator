@@ -3,8 +3,16 @@ using UnityEngine;
 
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
+  public bool interactable = false;
+  public double money;
   public int score { get; set; }
-  public List<GameObject> foodPool = new List<GameObject>();
+  public int highScore { get; set; }
+  public int foodInScoreRun { get; set; }
+  public float scoreMultiplier = 1f;
+  public float maxScoreRunTime = 10.0f; //As the multiplier goes up decrease this
+  public float scoreRunTime = 3.0f; //When this gets reset set it to maxScoreRunTime
+  public List<Rigidbody2D> foodPool = new List<Rigidbody2D>();
+  public List<Rigidbody2D> allFoodItems = new List<Rigidbody2D>();
 
   void Awake () {
     if (globalData == null) {
