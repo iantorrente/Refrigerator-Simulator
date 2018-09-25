@@ -26,7 +26,7 @@ public class Helpers : MonoBehaviour {
     updateScoreboard();
   }
 
-  private static void updateMultiplierText () {
+  public static void updateMultiplierText () {
     GameObject multiplierboard = GameObject.Find("Multiplierboard");
     multiplierboard.GetComponent<Text>().enabled = true;
     multiplierboard.GetComponent<Text>().text = ("x" + GlobalData.globalData.scoreMultiplier);
@@ -44,7 +44,6 @@ public class Helpers : MonoBehaviour {
 
   private static void checkMultiplier () {
     int foodInScoreRun = GlobalData.globalData.foodInScoreRun;
-    Debug.Log(foodInScoreRun);
 
     if (foodInScoreRun > 1 && foodInScoreRun <= 10) {
       GlobalData.globalData.scoreMultiplier = 1.25f;
@@ -65,13 +64,13 @@ public class Helpers : MonoBehaviour {
   private static void decreaseTimer () {
     float multiplier = GlobalData.globalData.scoreMultiplier;
 
-    if (multiplier == 1.25f) {
+    if (multiplier >= 1.25f || multiplier < 1.50f) {
       GlobalData.globalData.maxScoreRunTime = 10.0f;
-    } else if (multiplier == 1.50f) {
+    } else if (multiplier >= 1.50f || multiplier < 2.0f) {
       GlobalData.globalData.maxScoreRunTime = 9.0f;
-    } else if (multiplier == 2.0f) {
+    } else if (multiplier >= 2.0f || multiplier < 2.75f) {
       GlobalData.globalData.maxScoreRunTime = 7.5f;
-    } else if (multiplier == 2.75f) {
+    } else if (multiplier >= 2.75f || multiplier < 3.75f) {
       GlobalData.globalData.maxScoreRunTime = 4.5f;
     } else if (multiplier == 3.75f) {
       GlobalData.globalData.maxScoreRunTime = 2.0f;

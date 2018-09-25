@@ -2,18 +2,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+  Controls all aspects of generating food. Also handles opening/closing the fridge
+  because I don't know the meaning of "single responsibility".
+
+  ===Will contain logic for checking if the fridge is empty of food===
+*/
 public class GenerateFood : MonoBehaviour {
 
   private List<Rigidbody2D> foodPool { get; set; }
+  private GameObject[] foodSpawners { get; set; }
+
+  private void Start () {
+    foodSpawners = GameObject.FindGameObjectsWithTag("Food Spawner");
+  }
 
   public void buttonClick () {
-    //We want to generate random food for each spawner when the fridge is opened. Take
-    //that pool from GlobalData.globalData.foodPool because that will be added onto 
-    //whenever the player gains access to new foods.
-    
-    GameObject fridgeButton = GameObject.Find("Refrigerator");
-    foodPool = GlobalData.globalData.foodPool;
-    GameObject[] foodSpawners = GameObject.FindGameObjectsWithTag("Food Spawner");
+    GameObject fridgeButton = GameObject.Find("Refrigerator"); //Move this to Start()
+    foodPool = GlobalData.globalData.foodPool; 
 
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN" ) {
       for (int i = 0; i < foodSpawners.Length; i++) {
@@ -25,19 +31,17 @@ public class GenerateFood : MonoBehaviour {
         foodSpawners[i].transform.localScale = randomFood.transform.localScale / 10;
         foodSpawners[i].AddComponent(rFCollider.GetType());
         foodSpawners[i].GetComponent<Collider2D>().isTrigger = true;
-        foodSpawners[i].GetComponent<FoodSpawner>().foodPrefab = randomFood;
+        foodSpawners[i].GetComponent<FoodSpawner>().foodPrefab = randomFood; //Add the random food to the food spawner
       }
     } else if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "CLOSE") {
+      checkFridge();
+
       for (int i = 0; i < foodSpawners.Length; i++) {
         Destroy(foodSpawners[i].GetComponent<Collider2D>());
       }
     }
 
     handleOpenClose(fridgeButton);
-    // Rigidbody2D foodInstance;
-    // foodPool = GlobalData.globalData.foodPool;
-    // foodPrefab = foodPool[Random.Range(0, foodPool.Count)];
-    // foodInstance = Instantiate(foodPrefab, foodSpawner.position, foodSpawner.rotation);
   }
 
   private void handleOpenClose (GameObject fridgeButton) {
@@ -50,5 +54,15 @@ public class GenerateFood : MonoBehaviour {
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "OPEN";
       GameObject.Find("Refrigerator1_Door").GetComponent<SpriteRenderer>().enabled = true;
     }
+  }
+
+  //Checks how much food is left in the fridge and gives players score depending on it
+  private void checkFridge () {
+    int foodTakenOutOfFridge = GlobalData.globalData.foodTakenOutOfFridge;
+    int fridgeScore = GlobalData.globalData.scoreForFridge;
+    Debug.Log(foodTakenOutOfFridge + " food taken out");
+    int scoreForFridge = foodTakenOutOfFridge * fridgeScore;
+    Helpers.increaseScore(scoreForFridge);
+    GlobalData.globalData.foodTakenOutOfFridge = 0;
   }
 }
