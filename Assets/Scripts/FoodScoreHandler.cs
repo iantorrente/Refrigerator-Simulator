@@ -57,6 +57,7 @@ public class FoodScoreHandler : MonoBehaviour {
     }
     chewingHandler.Chew();
     Object.Destroy(collider.gameObject);
+    Instantiate(collider.gameObject.GetComponent<FoodValue>().particle, collider.transform.position, collider.transform.rotation);
   }
 
   

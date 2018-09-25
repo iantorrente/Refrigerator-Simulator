@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 212294029259903542}
   - component: {fileID: 50825386115174136}
   - component: {fileID: 60337670665587452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Raw Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: Raw Fish
   scoreValue: -100
-  moneyValue: 0
+  moneyValue: 45
+  throwAwayValue: 0
   cost: 15.99
   type: small
   sprites: []

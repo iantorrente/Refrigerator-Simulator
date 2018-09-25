@@ -38,6 +38,10 @@ public class Helpers : MonoBehaviour {
     checkMultiplier();
   }
 
+  public static void increaseFoodDiscarded () {
+    GlobalData.globalData.totalFoodDiscarded += 1;
+  }
+
   private static void checkMultiplier () {
     int foodInScoreRun = GlobalData.globalData.foodInScoreRun;
     Debug.Log(foodInScoreRun);
