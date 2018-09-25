@@ -107,6 +107,7 @@ MonoBehaviour:
   foodName: Rotten Food
   scoreValue: -50
   moneyValue: 0
+  throwAwayValue: 25
   cost: 0
   type: small
   sprites:

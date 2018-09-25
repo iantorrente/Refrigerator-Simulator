@@ -7,7 +7,6 @@ public class MouthHandler : MonoBehaviour {
   }
 
   private void OnTriggerEnter2D (Collider2D other) {
-    Debug.Log("Food entered");
     if (other.GetComponent<FoodValue>()) {
       animator.SetBool("canChomp", true);
     }

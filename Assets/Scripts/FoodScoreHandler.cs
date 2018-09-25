@@ -21,6 +21,7 @@ public class FoodScoreHandler : MonoBehaviour {
     if(foodCorrectSequence.GetRange(0, foodPlayerSequence.Count).SequenceEqual(foodPlayerSequence) )CheckFoodSequence();
     else foodPlayerSequence = new List<string>(){name};
     Object.Destroy(collider.gameObject);
+    Instantiate(collider.gameObject.GetComponent<FoodValue>().particle, collider.transform.position, collider.transform.rotation);
   }
 
   void CheckFoodSequence(){

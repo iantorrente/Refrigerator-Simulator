@@ -114,9 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: Raw Chicken
   scoreValue: -100
-  moneyValue: 0
+  moneyValue: 45
+  throwAwayValue: 0
   cost: 14.99
   type: small
+  sprites: []
 --- !u!212 &212897574105045872
 SpriteRenderer:
   m_ObjectHideFlags: 1
