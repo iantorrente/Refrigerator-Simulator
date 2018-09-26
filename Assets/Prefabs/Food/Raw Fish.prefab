@@ -121,6 +121,11 @@ MonoBehaviour:
   cost: 15.99
   type: small
   sprites: []
+  particle: {fileID: 198743781129161010, guid: fc8976aed962f0f41ac0f7547ab9f1f7, type: 2}
+  reactionParticle: {fileID: 198112896509417938, guid: cb29479c07aa6df44bf32c943891695e,
+    type: 2}
+  reactionResult: {fileID: 1124430484176240, guid: 478028bfab9c2c745a8451b4eb689152,
+    type: 2}
 --- !u!212 &212294029259903542
 SpriteRenderer:
   m_ObjectHideFlags: 1

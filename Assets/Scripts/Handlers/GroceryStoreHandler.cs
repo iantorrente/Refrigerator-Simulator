@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/*As an important note: we need to set the order of the panels in the 
+EventSystem's GroceryStoreHandler component because FindGameObjectsWithTag
+doesn't return a reliable list. If you can find a way to do it reliably 
+then that would be better. */
 public class GroceryStoreHandler : MonoBehaviour {
   public GameObject[] panels;
   GameObject currentPanel { get; set; }

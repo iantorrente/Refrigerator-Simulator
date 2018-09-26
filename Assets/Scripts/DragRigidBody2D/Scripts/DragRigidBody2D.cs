@@ -73,6 +73,7 @@ public class DragRigidBody2D : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began && hit.rigidbody != null && !drags.ContainsKey(touch.fingerId))
             {
+                GlobalData.globalData.canPickupFood = false;
                 //Start building up a profile for this specific drag
                 DragInfo info;
                 info.draggedTransform = hit.transform;
@@ -104,6 +105,7 @@ public class DragRigidBody2D : MonoBehaviour
             //Stop dragging
             if (touch.phase == TouchPhase.Ended && drags.ContainsKey(touch.fingerId))
             {
+                GlobalData.globalData.canPickupFood = true;
                 DragInfo info = drags[touch.fingerId];
 
                 //reset the fixed angle value

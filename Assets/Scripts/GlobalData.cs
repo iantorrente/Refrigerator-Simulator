@@ -4,12 +4,15 @@ using UnityEngine;
 public class GlobalData : MonoBehaviour {
   public static GlobalData globalData { get; set; }
   public bool interactable = false;
+  public bool canPickupFood = true;
   public double money;
   public int score { get; set; }
   public int highScore { get; set; }
   public int totalFoodDiscarded { get; set; }
   public int totalFoodEaten { get; set; }
   public int foodInScoreRun { get; set; }
+  public int foodTakenOutOfFridge { get; set; }
+  public int scoreForFridge = 0;
   public float scoreMultiplier = 1f;
   public float maxScoreRunTime = 10.0f; //As the multiplier goes up decrease this
   public float scoreRunTime = 3.0f; //When this gets reset set it to maxScoreRunTime

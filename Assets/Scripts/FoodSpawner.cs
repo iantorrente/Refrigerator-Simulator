@@ -4,8 +4,7 @@ public class FoodSpawner : MonoBehaviour {
   public Rigidbody2D foodPrefab;
 
   void Update () {
-    //Need to do a check that the player isn't holding an item with that finger (seems like DragRigidBody2D already does this. Check in on it though)
-    if (Input.touchCount > 0 && GlobalData.globalData.interactable == true) {
+    if (Input.touchCount > 0 && GlobalData.globalData.interactable == true && GlobalData.globalData.canPickupFood) {
       Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
 
       if (this.GetComponent<Collider2D>() != null && GetComponent<Collider2D>().OverlapPoint(worldPoint)) {
@@ -14,6 +13,7 @@ public class FoodSpawner : MonoBehaviour {
         foodInstance.transform.localScale = foodInstance.transform.localScale;
         Destroy(GetComponent<Collider2D>());
         GetComponent<SpriteRenderer>().enabled = false;
+        GlobalData.globalData.foodTakenOutOfFridge += 1;
       }
     }
   }

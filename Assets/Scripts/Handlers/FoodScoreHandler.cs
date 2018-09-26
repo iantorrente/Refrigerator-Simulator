@@ -28,8 +28,13 @@ public class FoodScoreHandler : MonoBehaviour {
     }; 
     ChewingHandler chewingHandler;
 	List<string> foodPlayerSequence = new List<string>{};
+  List<ParticleSystem> particles = new List<ParticleSystem>();
+  GameObject particleSpawner;
+  
   void Start(){
     this.chewingHandler = new ChewingHandler();
+    particleSpawner = GameObject.Find("Particle Spawner");
+    particles = particleSpawner.GetComponent<Particles>().particles;
   }
 
 	void OnTriggerEnter2D (Collider2D collider) {
@@ -41,7 +46,6 @@ public class FoodScoreHandler : MonoBehaviour {
     Helpers.increaseScore(value);
     Helpers.startScoreRun();
 
-    
     var check = false;
     foreach(List<string> foodCorrectSequence in foodCorrectSequences){
       if(foodPlayerSequence.Count <= foodCorrectSequence.Count){
@@ -56,8 +60,13 @@ public class FoodScoreHandler : MonoBehaviour {
       foodPlayerSequence = new List<string>(){name};
     }
     chewingHandler.Chew();
+    //Have to make this its own script/class
+    if (collider.gameObject.GetComponent<FoodValue>().foodName == "Hot Pepper") {
+      particles[0].startDelay = 1;
+      Instantiate(particles[0], particleSpawner.transform.position, particles[0].transform.rotation); //Rotation is what sets the z axis
+    }
+    instantiateParticleEffect(collider);
     Object.Destroy(collider.gameObject);
-    Instantiate(collider.gameObject.GetComponent<FoodValue>().particle, collider.transform.position, collider.transform.rotation);
   }
 
   
@@ -67,6 +76,12 @@ public class FoodScoreHandler : MonoBehaviour {
       commandDictionary[foodCorrectSequence]();
       
       foodPlayerSequence = new List<string>();
+    }
+  }
+
+  void instantiateParticleEffect (Collider2D collider) {
+    if (collider.gameObject.GetComponent<FoodValue>().particle) {
+      Instantiate(collider.gameObject.GetComponent<FoodValue>().particle, collider.transform.position, collider.transform.rotation);
     }
   }
 }

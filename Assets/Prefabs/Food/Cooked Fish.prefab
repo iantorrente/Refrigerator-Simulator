@@ -115,9 +115,11 @@ MonoBehaviour:
   foodName: Cooked Fish
   scoreValue: 50
   moneyValue: 10
+  throwAwayValue: 0
   cost: 89.99
   type: small
   sprites: []
+  particle: {fileID: 198743781129161010, guid: fc8976aed962f0f41ac0f7547ab9f1f7, type: 2}
 --- !u!212 &212162791797790946
 SpriteRenderer:
   m_ObjectHideFlags: 1
