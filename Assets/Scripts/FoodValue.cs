@@ -7,6 +7,7 @@ public class FoodValue : MonoBehaviour {
   public int scoreValue;
   public int moneyValue;
   public int throwAwayValue;
+  public double cookingTime;
   public double cost;
   public string type;
   public List<Sprite> sprites = new List<Sprite>();

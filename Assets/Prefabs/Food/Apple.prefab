@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodName: Apple
-  reaction: Burn
   scoreValue: 15
   moneyValue: 5
   throwAwayValue: 0
