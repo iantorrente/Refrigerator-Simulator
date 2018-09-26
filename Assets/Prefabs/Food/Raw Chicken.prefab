@@ -113,12 +113,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodName: Raw Chicken
+  reaction: 
   scoreValue: -100
   moneyValue: 45
   throwAwayValue: 0
   cost: 14.99
   type: small
   sprites: []
+  particle: {fileID: 0}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 1079361008018394, guid: 12a880676e847cc46a5ec1bd06a8b42a,
+    type: 2}
 --- !u!212 &212897574105045872
 SpriteRenderer:
   m_ObjectHideFlags: 1

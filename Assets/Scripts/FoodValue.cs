@@ -11,4 +11,6 @@ public class FoodValue : MonoBehaviour {
   public string type;
   public List<Sprite> sprites = new List<Sprite>();
   public ParticleSystem particle;
+  public ParticleSystem reactionParticle;
+  public GameObject reactionResult;
 }

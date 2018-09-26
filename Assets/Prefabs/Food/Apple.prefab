@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodName: Apple
+  reaction: Burn
   scoreValue: 15
   moneyValue: 5
   throwAwayValue: 0
@@ -97,6 +98,10 @@ MonoBehaviour:
   type: small
   sprites: []
   particle: {fileID: 198936992491539338, guid: afc350e4d9da950438c745189264d550, type: 2}
+  reactionParticle: {fileID: 198854720478125982, guid: cc783a9dbfd49eb4498706a40a48fee2,
+    type: 2}
+  reactionResult: {fileID: 1369690324013762, guid: 3208b3c67f8e8a341a8112b148b18d61,
+    type: 2}
 --- !u!212 &212415852005477012
 SpriteRenderer:
   m_ObjectHideFlags: 1
