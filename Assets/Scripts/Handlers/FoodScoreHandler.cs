@@ -26,13 +26,12 @@ public class FoodScoreHandler : MonoBehaviour {
       {foodCorrectSequences[5],() => Helpers.increaseScore(200)},
       {foodCorrectSequences[6],() => Helpers.increaseScore(-200)}
     }; 
-    ChewingHandler chewingHandler;
+  
 	List<string> foodPlayerSequence = new List<string>{};
   List<ParticleSystem> particles = new List<ParticleSystem>();
   GameObject particleSpawner;
   
   void Start(){
-    this.chewingHandler = new ChewingHandler();
     particleSpawner = GameObject.Find("Particle Spawner");
     particles = particleSpawner.GetComponent<Particles>().particles;
   }
@@ -59,7 +58,7 @@ public class FoodScoreHandler : MonoBehaviour {
     if(!check){
       foodPlayerSequence = new List<string>(){name};
     }
-    chewingHandler.Chew();
+    
     //Have to make this its own script/class
     if (collider.gameObject.GetComponent<FoodValue>().foodName == "Hot Pepper") {
       particles[0].startDelay = 1;
