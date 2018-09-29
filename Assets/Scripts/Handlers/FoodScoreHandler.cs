@@ -6,6 +6,7 @@ using UnityEngine;
 //Make this class a generic "FoodHandler" to handle scoring and deleting
 //attach it to the eat zone and delete zone when it's genericified
 public class FoodScoreHandler : MonoBehaviour {
+    static AchievementHandler achievementHandler = Initializer.achievementHandler;
     public static readonly IList<List<string>> foodCorrectSequences = new List<List<string>>{
     new List<string>{"Apple", "Burger", "Banana"}, // classic meal
     new List<string>{"Cake","Cookie","Banana","Cookie","Cake"}, //desert delight
@@ -19,19 +20,32 @@ public class FoodScoreHandler : MonoBehaviour {
     public static readonly Dictionary<List<string>, System.Action> commandDictionary = new Dictionary<List<string>,System.Action>
     {
       {foodCorrectSequences[0],() => Helpers.increaseScore(150)},
-      {foodCorrectSequences[1],() => Helpers.increaseScore(777)},
-      {foodCorrectSequences[2],() => Helpers.increaseScore(200)},
+      {foodCorrectSequences[1],() =>{Helpers.increaseScore(777); achievementHandler.RegisterEvent(AchievementType.Combo, "Amazing");}},
+      {foodCorrectSequences[2],() => {Helpers.increaseScore(200); achievementHandler.RegisterEvent(AchievementType.Combo);}},
       {foodCorrectSequences[3],() => Helpers.increaseScore(50)},
       {foodCorrectSequences[4],() => Helpers.increaseScore(20)},
       {foodCorrectSequences[5],() => Helpers.increaseScore(200)},
-      {foodCorrectSequences[6],() => Helpers.increaseScore(-200)}
+      {foodCorrectSequences[6],() => {Helpers.increaseScore(-200); achievementHandler.RegisterEvent(AchievementType.Combo, "Ew");}}
     }; 
   
 	List<string> foodPlayerSequence = new List<string>{};
   List<ParticleSystem> particles = new List<ParticleSystem>();
   GameObject particleSpawner;
-  
-  void Start(){
+
+    public AchievementHandler AchievementHandler
+    {
+        get
+        {
+            return achievementHandler;
+        }
+
+        set
+        {
+            achievementHandler = value;
+        }
+    }
+
+    void Start(){
     particleSpawner = GameObject.Find("Particle Spawner");
     particles = particleSpawner.GetComponent<Particles>().particles;
   }

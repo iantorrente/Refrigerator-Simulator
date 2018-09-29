@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,12 @@ public class Helpers : MonoBehaviour {
     GameObject moneyboard = GameObject.Find("Moneyboard");
     moneyboard.GetComponent<Text>().text = ("$" + String.Format("{0:0.00}", money));
   }
-
+  public static void showAchievement(Achievement ach){
+    GameObject achBoard = GameObject.Find("Achboard");
+    Console.WriteLine(ach.achievementName);
+    achBoard.GetComponent<Text>().text = ach.achievementName;
+  
+  }
   public static void increaseScore (int value) {
     float multiplier = GlobalData.globalData.scoreMultiplier;
     GlobalData.globalData.score += (int)(Math.Ceiling(value * multiplier));

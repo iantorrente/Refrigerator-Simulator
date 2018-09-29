@@ -7,13 +7,15 @@ using UnityEngine.UI;
   intended state. The class is destroyed once it's done initializing everything
 */
 public class Initializer : MonoBehaviour {
+  public static AchievementHandler achievementHandler;
+  
   void Start () {
     GameObject multiplierboard = GameObject.Find("Multiplierboard");
     GameObject refrigeratorDoor = GameObject.FindWithTag("Refrigerator Door");
-
     multiplierboard.GetComponent<Text>().enabled = false;
     refrigeratorDoor.GetComponent<SpriteRenderer>().enabled = true;
-
+    achievementHandler= new AchievementHandler();
+    
     Destroy(this.gameObject);
   }
 }

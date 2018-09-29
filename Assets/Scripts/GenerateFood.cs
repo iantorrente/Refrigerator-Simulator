@@ -12,8 +12,9 @@ public class GenerateFood : MonoBehaviour {
 
   private List<Rigidbody2D> foodPool { get; set; }
   private GameObject[] foodSpawners { get; set; }
-
+  
   private void Start () {
+
     foodSpawners = GameObject.FindGameObjectsWithTag("Food Spawner");
   }
 
@@ -22,6 +23,7 @@ public class GenerateFood : MonoBehaviour {
     foodPool = GlobalData.globalData.foodPool; 
 
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN" ) {
+      Initializer.achievementHandler.RegisterEvent(AchievementType.Start);
       for (int i = 0; i < foodSpawners.Length; i++) {
         Rigidbody2D randomFood = foodPool[Random.Range(0, foodPool.Count)];
         Collider2D rFCollider = randomFood.GetComponent<Collider2D>();
