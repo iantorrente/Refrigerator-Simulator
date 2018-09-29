@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1151096678966546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.11423127, y: -0.45139986, z: 1.9511719}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   scoreValue: -100
   moneyValue: 45
   throwAwayValue: 0
+  cookingTime: 0
   cost: 14.99
   type: small
   sprites: []

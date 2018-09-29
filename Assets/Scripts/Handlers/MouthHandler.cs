@@ -13,7 +13,7 @@ public class MouthHandler : MonoBehaviour {
   }
 
   private void Update () {
-    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Mouth (Eat)")) {
+    if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Chomp_Anim")) {
       animator.SetBool("canChomp", false);
     }
   }

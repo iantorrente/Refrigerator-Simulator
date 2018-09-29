@@ -110,8 +110,14 @@ MonoBehaviour:
   foodName: Banana
   scoreValue: 15
   moneyValue: 5
+  throwAwayValue: 0
+  cookingTime: 0
   cost: 24.99
   type: small
+  sprites: []
+  particle: {fileID: 198546536555246276, guid: 9d369979e8c83f049a035c0d65a36067, type: 2}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212509708069879292
 SpriteRenderer:
   m_ObjectHideFlags: 1

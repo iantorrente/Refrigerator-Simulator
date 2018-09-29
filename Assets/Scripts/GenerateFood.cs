@@ -48,11 +48,11 @@ public class GenerateFood : MonoBehaviour {
     if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "OPEN") {
       GlobalData.globalData.interactable = true;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "CLOSE";
-      GameObject.Find("Refrigerator1_Door").GetComponent<SpriteRenderer>().enabled = false;
+      GameObject.FindGameObjectWithTag("Refrigerator Door").GetComponent<SpriteRenderer>().enabled = false;
     } else if (fridgeButton.GetComponentsInChildren<Text>()[0].text == "CLOSE") {
       GlobalData.globalData.interactable = false;
       fridgeButton.GetComponentsInChildren<Text>()[0].text = "OPEN";
-      GameObject.Find("Refrigerator1_Door").GetComponent<SpriteRenderer>().enabled = true;
+      GameObject.FindGameObjectWithTag("Refrigerator Door").GetComponent<SpriteRenderer>().enabled = true;
     }
   }
 

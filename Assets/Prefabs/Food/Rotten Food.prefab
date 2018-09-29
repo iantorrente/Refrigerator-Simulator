@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.75, y: 1.75}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.75, y: 1.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -108,14 +108,13 @@ MonoBehaviour:
   scoreValue: -50
   moneyValue: 0
   throwAwayValue: 25
+  cookingTime: 0
   cost: 0
   type: small
-  sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  sprites: []
   particle: {fileID: 0}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212845410655955384
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -151,7 +150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4451e7a6b274f994baa3f7036177c06b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ca2044a7e3144c429b120989ea82bba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -41,8 +41,8 @@ public class FoodScoreHandler : MonoBehaviour {
 	  foodPlayerSequence.Add(name);
     
     int value = collider.gameObject.GetComponent<FoodValue>().scoreValue;
-    Helpers.increaseFoodEaten();
     Helpers.increaseScore(value);
+    Helpers.increaseFoodEaten();
     Helpers.startScoreRun();
 
     var check = false;
@@ -67,8 +67,6 @@ public class FoodScoreHandler : MonoBehaviour {
     instantiateParticleEffect(collider);
     Object.Destroy(collider.gameObject);
   }
-
-  
 
   void CheckFoodSequence(List<string> foodCorrectSequence){
 	  if(foodPlayerSequence.SequenceEqual( foodCorrectSequence)){ 

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114023781824044370}
   - component: {fileID: 212096764772543076}
   - component: {fileID: 50702658089677358}
-  - component: {fileID: 60109133770382666}
+  - component: {fileID: 60557808745657866}
   m_Layer: 8
   m_Name: Watermelon
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1183482161500354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2049, y: -0.5749, z: 1.5077076}
-  m_LocalScale: {x: 0.32216698, y: 0.31135094, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &60109133770382666
+--- !u!60 &60557808745657866
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,22 +79,22 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.4339418, y: -1.1286863}
-      - {x: -1.5914873, y: -2.050004}
-      - {x: -0.5115564, y: -2.4060688}
-      - {x: 0.5861608, y: -2.2600644}
-      - {x: 1.820471, y: -1.5022315}
-      - {x: 2.3990757, y: -0.4983567}
-      - {x: 2.4578428, y: 0.4097041}
-      - {x: 2.039595, y: 1.5853379}
+    - - {x: -0.4904515, y: -0.02500841}
+      - {x: -0.39250016, y: -0.28124997}
+      - {x: -0.20860736, y: -0.3919644}
+      - {x: 0.21260719, y: -0.39196447}
+      - {x: 0.39342862, y: -0.25321463}
+      - {x: 0.49385715, y: -0.013500392}
+      - {x: 0.49692857, y: 0.21060728}
+      - {x: -0.4877143, y: 0.21060728}
 --- !u!114 &114023781824044370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,8 +109,14 @@ MonoBehaviour:
   foodName: Watermelon
   scoreValue: 15
   moneyValue: 5
+  throwAwayValue: 0
+  cookingTime: 0
   cost: 9.99
   type: small
+  sprites: []
+  particle: {fileID: 198638714809281304, guid: 209f47b33db970e4c81234cf33d38693, type: 2}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212096764772543076
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -145,13 +151,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a949af3a2a1491a4eb87a2d373f331f0, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 3b0480e1aedf8c24f8dac9351a35a420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

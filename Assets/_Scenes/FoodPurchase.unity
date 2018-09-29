@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 74093100}
   - component: {fileID: 74093102}
   m_Layer: 5
-  m_Name: Steak
+  m_Name: Cooked Steak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 676828396}
   - component: {fileID: 676828395}
   m_Layer: 5
-  m_Name: Steak Panel
+  m_Name: Cooked Steak Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3819,7 +3819,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 0
+  canPickupFood: 1
   money: 0
+  scoreForFridge: 0
   scoreMultiplier: 1
   maxScoreRunTime: 10
   scoreRunTime: 3

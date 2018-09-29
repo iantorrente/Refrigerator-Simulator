@@ -108,9 +108,14 @@ MonoBehaviour:
   foodName: Cake
   scoreValue: 150
   moneyValue: 75
+  throwAwayValue: 0
+  cookingTime: 0
   cost: 149.99
   type: small
   sprites: []
+  particle: {fileID: 198646121243926258, guid: fd8e4e329fbbaf344aa28b1f3d72e030, type: 2}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212830138901160760
 SpriteRenderer:
   m_ObjectHideFlags: 1

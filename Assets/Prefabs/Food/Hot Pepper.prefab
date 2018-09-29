@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212458553577345212}
   - component: {fileID: 50218849963595386}
   - component: {fileID: 60174015930495690}
+  - component: {fileID: 58682983838917088}
   m_Layer: 8
   m_Name: Hot Pepper
   m_TagString: Untagged
@@ -63,6 +64,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &58682983838917088
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499915614191194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0030540943, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.637433
 --- !u!60 &60174015930495690
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -116,9 +132,14 @@ MonoBehaviour:
   foodName: Hot Pepper
   scoreValue: 25
   moneyValue: 100
+  throwAwayValue: 0
+  cookingTime: 0
   cost: 24.99
   type: small
   sprites: []
+  particle: {fileID: 0}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212458553577345212
 SpriteRenderer:
   m_ObjectHideFlags: 1

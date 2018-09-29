@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1143566675912008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.103, y: 1.455, z: 1.4142753}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,8 +107,14 @@ MonoBehaviour:
   foodName: Burger
   scoreValue: 100
   moneyValue: 25
+  throwAwayValue: 0
+  cookingTime: 0
   cost: 59.99
   type: small
+  sprites: []
+  particle: {fileID: 198782838226200446, guid: fab25d7cfc11ec447a86cc1e435cd217, type: 2}
+  reactionParticle: {fileID: 0}
+  reactionResult: {fileID: 0}
 --- !u!212 &212377312884415760
 SpriteRenderer:
   m_ObjectHideFlags: 1
